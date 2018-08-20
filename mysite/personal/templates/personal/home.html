@@ -1,0 +1,22 @@
+{% extends "personal/header.html" %}
+{% block content %}
+{% load staticfiles %}
+<div class="container">
+    <div class="well">
+        <div class="row">
+            <div class="col-sm-3">
+                    <img src="{% static 'images/me.jpg' %}" class="img-responsive">
+            </div>
+            <div class="col-sm-9">
+                <h3>/personal/templates/personal/home.html</h3>
+                <p>
+                    This is home.html that extends header.html, rendered by Jinja in Django.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include "personal/includes/widget_1.html" %}
+
+{% endblock %}

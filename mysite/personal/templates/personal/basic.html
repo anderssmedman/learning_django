@@ -1,0 +1,38 @@
+{% extends "personal/header.html" %}
+{% block content %}
+{% load staticfiles %}
+<div class="container">
+    <div class="well">
+        <div class="row">
+            <div class="col-sm-3">
+                    <img src="{% static 'images/me.jpg' %}" class="img-responsive">
+            </div>
+            <div class="col-sm-9">
+                <h3>/personal/templates/personal/basic.html</h3>
+                <p>
+                    <u>for loop the dictionary</u><br>
+                   {%for d in data%}
+                    {{d}}<br>
+                   {%endfor%}
+
+                    <br><br>
+
+                    <u>direct address the array item no 2, idx 1, with data.1</u><br>
+                   {{data.1}}<br>
+                
+                   <br><br>
+
+                   <u>length of dictionary</u><br>
+                   There are {{data|length}} items in the dictionary.<br>
+
+                   <br><br>
+
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include "personal/includes/widget_1.html" %}
+
+{% endblock %}
